@@ -18,22 +18,20 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 
 
-public class findeljuego extends JFrame implements MouseListener{
+public class findeljuego2 extends JFrame implements MouseListener{
 private String cadena;
-private Board flappymula;
 private boolean valor;
+private Board flappymula;
 private JLabel imagen;
 private ImageIcon icono;
 private JButton boton;
 private Jugabilidad jugabilidad;
 
-    public findeljuego(){
-        
-        this.valor=true;
-        
-        this.jugabilidad=new Jugabilidad();
+    public findeljuego2(){
         
         
+        
+     this.valor=false;   
         
                 
         boton=new JButton("Siguiente"); 
@@ -53,7 +51,6 @@ add(imagen);//se agregan los objetos al frame
 add(boton);//se agrega el boton al frame o ventana.
 
 
-
       
        
 
@@ -62,22 +59,21 @@ add(boton);//se agrega el boton al frame o ventana.
     public String retornarcadena(boolean gameover){
         
         int numero = (int) (Math.random() * 2) + 1;
-    if(gameover==true){
-        
+ 
+    if(gameover==false){
         
         if(numero==1){
         
-    this.cadena="perdiste1.png";
-        }else{if(numero==2){
+    this.cadena="ganaste1.png";
+        } else{if(numero==2){
         
-        this.cadena="perdiste2.png";
+        this.cadena="ganaste2.png";
         }
         
         
-        }
+        }  
     
     }
- 
     return this.cadena;
     }
       

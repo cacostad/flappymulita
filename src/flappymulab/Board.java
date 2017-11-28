@@ -27,6 +27,7 @@ import javax.swing.Timer;
 public class Board extends JPanel implements ActionListener {
   // cuando el jugador gane o pierda abrimos un nuevo Jframe 
    private findeljuego siguiente;
+    private findeljuego2 siguiente2;
    
    // Esta variable es el controlador del juego
     public Jugabilidad jugabilidad;
@@ -38,6 +39,7 @@ public class Board extends JPanel implements ActionListener {
     this.jugabilidad=new Jugabilidad();
     this.timer = new Timer(20,this);
    this.siguiente=new findeljuego();
+   this.siguiente2=new findeljuego2();
    setFocusable(true);
     addKeyListener(new Teclado());
     timer.start();
@@ -88,19 +90,20 @@ public class Board extends JPanel implements ActionListener {
                 if (this.jugabilidad.isGameover())
 		{
                     this.timer.stop();
-                    
+                   
                     this.siguiente.setVisible(true);
                      
+                   
                    
            
                         
 		}
                 
-                if(this.jugabilidad.getP2x()==25404){
+                if(this.jugabilidad.getP2x()>27400){
                 
                     this.timer.stop();
-                    
-                    this.siguiente.setVisible(true);
+                  
+                    this.siguiente2.setVisible(true);
                 
                 
                 }
